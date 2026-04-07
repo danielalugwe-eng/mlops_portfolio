@@ -3,7 +3,7 @@ import { ArrowDown, Cpu, BarChart2, GitBranch } from 'lucide-react';
 import './Hero.css';
 
 const BADGES = [
-  { icon: <Cpu size={14} />,      label: 'PyTorch' },
+  { icon: <Cpu size={14} />,       label: 'PyTorch' },
   { icon: <BarChart2 size={14} />, label: 'MLflow'  },
   { icon: <GitBranch size={14} />, label: 'Docker'  },
 ];
@@ -22,6 +22,15 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
+          <motion.div
+            className="hero-avatar-wrap"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img src="/profile.jpg" alt="Daniel Alugwe" className="hero-avatar" />
+          </motion.div>
+
           <div className="hero-label section-label">MLOps Engineer</div>
 
           <h1 className="hero-title">
@@ -33,8 +42,16 @@ export default function Hero() {
           <p className="hero-sub">
             I build end-to-end machine learning systems with a strong emphasis on MLOps,
             model reproducibility, deployment architecture, and production reliability.
-            My work covers the complete ML lifecycle — from data ingestion and preprocessing
-            to model development, validation, packaging, deployment, and inference optimization.
+            My work covers the complete ML lifecycle, from data ingestion and preprocessing
+            to model development, validation, packaging, deployment, and inference
+            optimization, ensuring solutions are scalable and maintainable in production.
+          </p>
+
+          <p className="hero-sub" style={{ marginTop: '12px' }}>
+            I am particularly interested in designing ML systems that combine strong
+            predictive performance with operational efficiency. Systems that are
+            reproducible, interpretable, deployment-ready, and aligned with real-world
+            decision making across analytics, automation, and intelligent applications.
           </p>
 
           <div className="hero-badges">

@@ -7,6 +7,35 @@
   padding: 80px 0 64px;
   overflow: hidden;
 }
+
+/* Profile avatar */
+.hero-avatar-wrap {
+  display: inline-block;
+  margin-bottom: 24px;
+  position: relative;
+}
+.hero-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.2), 0 8px 32px rgba(0,0,0,0.4);
+  display: block;
+}
+.hero-avatar-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 2px solid var(--bg);
+}
+
 .hero-glow {
   position: absolute;
   border-radius: 50%;
