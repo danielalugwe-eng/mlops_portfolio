@@ -64,6 +64,44 @@ const PROJECTS = [
     report: '/swiss-traffic-report-2025.pdf',
     image: '/swiss-dashboard.png',
   },
+  {
+    id: 'motor-pump-assistant',
+    icon: <Zap size={22} />,
+    color: '#ef4444',
+    color2: '#f59e0b',
+    status: 'MLOps + Monitoring',
+    title: 'Motor Pump Assistant',
+    subtitle: 'Predictive Maintenance for Machine Health',
+    description:
+      'A predictive maintenance workflow for motor and pump equipment that classifies healthy versus faulty vibration patterns, monitors drift, and supports retraining when live operating conditions begin to change.',
+    highlights: [
+      'End-to-end feature pipeline built from CWRU vibration data',
+      'Model comparison across Random Forest, Gradient Boosting, and SVM',
+      'Evidently-based drift detection and automated retraining checks',
+      'FastAPI backend plus Streamlit demo with Docker and Terraform support',
+    ],
+    tags: ['Python', 'FastAPI', 'Streamlit', 'Evidently', 'Docker', 'Terraform', 'Predictive Maintenance'],
+    github: 'https://github.com/danielalugwe-eng/motor_pump_assistant',
+  },
+  {
+    id: 'asia-livability-ai',
+    icon: <BarChart2 size={22} />,
+    color: '#0ea5e9',
+    color2: '#22c55e',
+    status: 'Forecasting Dashboard',
+    title: 'Asia Livability AI',
+    subtitle: 'Country Ranking, Comparison, and 5-Year Forecasting',
+    description:
+      'An end-to-end ML platform that predicts and compares livability scores for 49 Asian countries using World Bank, WHO, UNDP, and Yale EPI data, with an interactive dashboard for analysis, ranking, and future forecasts.',
+    highlights: [
+      'Full data pipeline from collection, harmonisation, imputation, and feature engineering',
+      'XGBoost and Random Forest models with Optuna tuning and time-series validation',
+      'Five-tab Streamlit dashboard for maps, country analysis, comparisons, forecasts, and data exploration',
+      'SHAP explainability plus 5-year forecasting with confidence intervals',
+    ],
+    tags: ['Python', 'XGBoost', 'Streamlit', 'Optuna', 'SHAP', 'DVC', 'Terraform'],
+    github: 'https://github.com/danielalugwe-eng/asia_livability_ai',
+  },
 ];
 
 const fade = {
@@ -85,8 +123,8 @@ export default function Projects() {
             <span className="section-label">Featured Work</span>
             <h2 className="section-title">ML Projects</h2>
             <p className="section-sub">
-              Applied machine learning across computer vision, predictive analytics, and
-              automated forecasting — each with production-grade pipelines.
+              Applied machine learning across computer vision, forecasting, decision
+              intelligence, and predictive maintenance with production-minded pipelines.
             </p>
           </motion.div>
 
